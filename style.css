@@ -1,0 +1,1534 @@
+/* The Modal (background) */
+.modal {
+  display: none;  /*Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  --ModalInputHeight: 40%;
+  --MsgBoxInputHeight: 40%;
+  --TextBoxMargin: 2% 0%;
+  color: #ffffff;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #1C252E;
+  margin: auto;
+  padding: 5%;
+  border: 1px solid #888;
+  width: 50%;
+  height: 90%; /*to adjust in js*/
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 10;
+  cursor: pointer; 
+}
+
+.form1{
+  width: 100%;
+  height: 80%;
+}
+
+.close:hover{
+  color: #000;
+  text-decoration: none;
+}
+
+.fname{
+  width: 100%;
+}
+
+input[type=text] {
+  width: 100%;
+  height: var(--ModalInputHeight); /*To be set in js*/
+  margin: var(--TextBoxMargin);
+  /*padding: 12px 20px;
+  margin: 8px 0;*/
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+.submit {
+  width: 100%;
+  height: 10%;
+  background-color: #3AAFA9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submit:hover {
+  background-color: #2F8F8A;
+  font-family: Arial;
+}
+
+.must{
+  color: red;
+}
+
+/*input[type=CommentText] {
+  width: 100%;
+  height: 100px;
+  padding: 0 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Arial;
+}*/
+
+.countrySel{
+  width: 100%;
+  height: var(--ModalInputHeight); /*To be set in js*/
+  margin: var(--TextBoxMargin);
+  /*padding: 12px 20px;
+  margin: 8px 0;*/
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+.form1  textarea[name="message"] { 
+    width: 100%;
+    height: var(--MsgBoxInputHeight); /*To be set in js*/
+    margin: var(--TextBoxMargin);
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+
+
+
+
+
+.header{
+  --a:white;
+  --Invert_a: #1C252E;  /*BLACK*/
+  background: var(--Invert_a);
+  color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  --height: 60px;
+  height: var(--height);
+  width: 100%;
+  z-index: 3;
+}
+
+.headerWord1{
+  position: absolute;
+  opacity: 1;
+  top: 50%;
+  left:6%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  color: var(--a);
+  padding: 0;
+  border: none;
+  background: var(--Invert_a);
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;      /*To scale in js to make it respond to resize*/
+  font-weight: bold;
+}
+
+.headerWord2{
+  position: absolute;
+  opacity: 1;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+  color: var(--Invert_a);
+  border: none;
+  border-radius: 10px;
+  background: #3AAFA9;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;      /*To scale in js to make it respond to resize*/
+  font-weight: bold;
+}
+
+.headerWord1:hover {
+  color: #C4C4C4 ;
+}
+
+.headerWord2:hover {
+  color: #3B4E61 ;
+}
+
+.emptyheader{
+  background: #555;
+  color: #f1f1f1;
+  position: static;
+  top: 0;
+  --height: 60px;
+  height: var(--height);
+  width: 100%;
+}
+
+#MainTitle{
+  position: static;
+}
+
+.FirstSegment{
+  width:100%;
+  opacity: 70%;
+  background-image: url("imageedit_3_8768023765.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  --fsHeight: 0px;
+  min-height:var(--fsHeight);
+  position: static;
+
+}
+
+.TitleContainer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.BackgroundText{
+  position: absolute;
+  width:100%;
+  text-align: center;
+  font-size: 25vmin;
+  font-weight: 600;
+  opacity: 90%;
+  top: 20%;
+  transform: translateY(-50%);
+  color: #f0f8ff;
+
+}
+
+.Title{
+  position: relative;
+  width: 100%;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+#firstLine{
+  --fontsize: 6vmin;
+  font-size: var(--fontsize);
+  font-weight: 420;
+  position: relative;
+  margin: 0;
+  width:100%;
+  text-align: center;
+  color: #DAA5E7;
+
+}
+
+#switch{
+  --fontsize: 6vmin;
+  font-size: var(--fontsize);
+  font-weight: 420;
+  position: absolute;
+  opacity: 0;
+  --content:"";
+  content: var(--content);
+  margin: 0;
+  width:100%;
+  text-align: center;
+  color: #DAA5E7;
+  
+  --time: 0s;     /*Dun care as will be set in js */
+  /*-webkit-animation: fadeInUp 500ms ease-in-out; /* Chrome, Safari, Opera */
+  animation: fade-in var(--time) ease-in-out forwards infinite;
+
+}
+
+.Title2{
+  position: relative;
+  width: 100%;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+#firstLine2{
+  font-size: 4vmin;
+  font-weight: 420;
+  position: relative;
+  margin: 0;
+  width:100%;
+  text-align: center;
+  color: #ffffff;
+
+}
+
+.Title3{
+  position: relative;
+  width: 100%;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+#firstLine3{
+  --fontsize: 7.5vmin;
+  font-size: var(--fontsize);
+  font-weight: 420;
+  position: relative;
+  margin: 0;
+  width:100%;
+  text-align: center;
+  color: #ffffff;
+
+}
+
+#switch3{
+  --fontsize: 7.5vmin;
+  font-size: var(--fontsize);
+  font-weight: 420;
+  position: absolute;
+  opacity: 0;
+  --content:"";
+  content: var(--content);
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  /*-webkit-text-stroke: 1px black;*/
+  
+  --time: 0s;     /*Dun care as will be set in js */
+  /*-webkit-animation: fadeInUp 500ms ease-in-out; /* Chrome, Safari, Opera */
+  animation: fade-in var(--time) ease-in-out forwards infinite;
+
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    top: 3vh;
+  }
+  20% {
+    opacity: 0;
+    top: 3vh;  /* got 0% and 20% same value for giving time to change word in js*/
+  }
+  50% {
+    opacity: 1;
+    top: 0vh;
+  }
+  70% {
+    opacity: 1;
+    top: 0vh;
+  }
+  100% {
+    opacity: 0;
+    top: -5vh;
+  }
+}
+
+.Images{
+  position: static;
+  cursor: none;
+  --font_size: 15px;
+  --font_size_for_text1: 45px;
+  --colorForLastMonth: #3AAFA9;
+  --font_size_for_hole_1st_desc: 15px;
+}
+/*
+.hole {
+  /*background: url(https://picsum.photos/id/1016/1024/768);
+  background: url("whiteBG1.jpg");
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;  /*Dont care value as will be further changed in JS
+  position: absolute;
+
+}
+*/
+.hole{
+  --a: #1C252E;
+  --Invert_a: white;
+  background-color: var(--Invert_a);
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;  /*Dont care value as will be further changed in JS*/
+  position: absolute;
+}
+
+.hole_1st{
+  color: var(--a);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font_size_for_text1);      /*To scale in js to make it respond to resize*/
+  font-weight: bold;
+  height: 25%;
+  text-align: center;
+  top: 10%;
+  position: relative;
+
+}
+
+.hole_1st_desc{
+  font-size: var(--font_size_for_hole_1st_desc);      /*To scale in js to make it respond to resize*/
+}
+
+
+.hole_2nd{
+  color: var(--a);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font_size_for_text2);      /*To scale in js to make it respond to resize*/
+  font-weight: bold;
+  height: 15%;
+  top: 5%;
+  left: 15%;
+  position: relative;
+}
+
+.hole_graphs{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;      /*To scale in js to make it respond to resize*/
+  font-weight: bold;
+  height: 60%;
+  width: 100%;
+  /*display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-gap: 1%;
+  bottom: 0%*/
+}
+
+@keyframes graph_pop_up {
+  from {height: 0%;}
+  to {height: var(--height);}
+}
+
+@keyframes graph_pop_up_infinite {
+  0% {
+    height: 32%;
+  }
+  50% {
+    height: 26%;
+  }
+  100% {
+    height: 32%;
+  }
+}
+
+.graph_1{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 30%;
+  height: var(--height);
+  bottom: 20%;
+  left: 15%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_1{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_1{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_2{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 35%;
+  height: var(--height);
+  bottom: 20%;
+  left: 23%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_2{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_2{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_3{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 33%;
+  height: var(--height);
+  bottom: 20%;
+  left: 31%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_3{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_3{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_4{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 25%;
+  height: var(--height);
+  bottom: 20%;
+  left: 39%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_4{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_4{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_5{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 35%;
+  height: var(--height);
+  bottom: 20%;
+  left: 47%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_5{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_5{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_6{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 31%;
+  height: var(--height);
+  bottom: 20%;
+  left: 55%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_6{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_6{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_7{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 33%;
+  height: var(--height);
+  bottom: 20%;
+  left: 63%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_7{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_7{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_8{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 41%;
+  height: var(--height);
+  bottom: 20%;
+  left: 71%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_8{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_8{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_9{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 29%;
+  height: var(--height);
+  bottom: 20%;
+  left: 79%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_9{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_9{
+  position: absolute;
+  color: var(--colorForLastMonth);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+
+.hole_above {
+  /*background: url(https://picsum.photos/id/1016/1024/768?grayscale); 
+  background-color: black;
+  background: url("BlackBG1.jpg");*/
+  --a:white;
+  --Invert_a: #1C252E;  /*BLACK*/
+  background-color: var(--Invert_a);
+  background-size: 100%;
+  --x: 0px;
+  --y: 0px;
+  width: 100%;
+  height: 100vh;  /*Dont care value as will be further changed in JS*/
+  position: relative;
+  z-index: 1;
+  
+  -webkit-mask-image: linear-gradient(0px at var(--x) var(--y), transparent 100%, #1C252E 100%);  /*Dont care value as will be further changed in JS*/
+}
+
+
+.graph_above_1{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 30%;
+  height: var(--height);
+  bottom: 20%;
+  left: 15%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_above_1{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_above_1{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_above_2{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 35%;
+  height: var(--height);
+  bottom: 20%;
+  left: 23%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_above_2{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_above_2{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 20%;
+}
+.graph_above_3{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 33%;
+  height: var(--height);
+  bottom: 20%;
+  left: 31%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_above_3{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 25%;
+}
+.qty_above_3{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_above_4{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 25%;
+  height: var(--height);
+  bottom: 20%;
+  left: 39%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_above_4{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_above_4{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_above_5{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 35%;
+  height: var(--height);
+  bottom: 20%;
+  left: 47%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_above_5{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_above_5{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_above_6{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 31%;
+  height: var(--height);
+  bottom: 20%;
+  left: 55%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_above_6{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_above_6{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_above_7{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 33%;
+  height: var(--height);
+  bottom: 20%;
+  left: 63%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_above_7{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_above_7{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_above_8{
+  position: absolute;
+  background-color: var(--a);
+  width: 7%;
+  --height: 41%;
+  height: var(--height);
+  bottom: 20%;
+  left: 71%;
+  border-radius: 15px;
+  animation: graph_pop_up 1s forwards;
+}
+.month_above_8{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_above_8{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 25%;
+}
+.graph_above_9{
+  position: absolute;
+  background-color: var(--colorForLastMonth);
+  width: 7%;
+  --height: 29%;
+  height: var(--height);
+  bottom: 20%;
+  left: 79%;
+  border-radius: 15px;
+  animation: graph_pop_up_infinite 2s forwards infinite;
+}
+.month_above_9{
+  position: absolute;
+  color: var(--a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  top:100%;
+  left: 20%;
+}
+.qty_above_9{
+  position: absolute;
+  color: var(--Invert_a);
+  font-size: var(--font_size); /*to change in js*/
+  width: 7%;
+  bottom:80%;
+  left: 40%;
+}
+
+/*2nd segment*/
+.SecondSegment{
+  position: absolute;
+  width: 100%;
+  --font_size_for_text1:55px; /*dun care as will further set in js*/
+  --font_size_for_smallText:15px; /*dun care as will further set in js*/
+  --font_size_for_smallText1:22px; /*dun care as will further set in js*/
+  height: 50vh;  /*Dont care value as will be further changed in JS*/
+  font-weight: bold;
+  opacity: 1;
+  /*background-color: #69627B;
+  background-image: linear-gradient(black, white);*/
+}
+
+.SecondSegment_Title_0{
+  position: relative;
+  color: #1C252E;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  top: 7%;
+  height: 50%;
+  z-index: 1
+}
+
+.SecondSegment_Title{
+  position: relative;
+  /*font-size: var(--font_size_for_text1);      /*To scale in js to make it respond to resize*/
+  font-weight: bold;
+  animation: graph_enlarge 1.5s forwards;
+}
+
+.more{
+  font-size: 160%;
+}
+
+.less{
+  font-size: 80%;
+}
+
+@keyframes graph_enlarge {
+  /*from {height: 0%;}
+  to {height: var(--height);}*/
+  0% {
+    opacity: 1;
+    font-size: 0;
+    top:100%;
+  }
+  25% {
+    opacity: 1;
+    font-size: calc(var(--font_size_for_text1)*1.18);
+    top:0%;
+  }
+  50% {
+    opacity: 1;
+    font-size: calc(var(--font_size_for_text1)*0.95);
+    top:0%;
+  }
+  75% {
+    opacity: 1;
+    font-size: calc(var(--font_size_for_text1)*1.01);
+    top:0%;
+  }
+  100% {
+    opacity: 1;
+    font-size: var(--font_size_for_text1);
+    top:0%;
+  }
+}
+
+.SecondSegment_Desc{
+  position: relative;
+  /*font-size: var(--font_size_for_smallText);      /*To scale in js to make it respond to resize*/
+  font-weight: bold;
+  --font_size_for_text1: var(--font_size_for_smallText);
+  animation: graph_enlarge 2s forwards;
+}
+
+.TBA{
+  position: relative;
+  height: 5%;
+  font-size: var(--font_size_for_smallText1);      /*To scale in js to make it respond to resize*/
+}
+
+.SecondSegment_Title_123{
+  position: relative;
+  text-align:left;
+  width: 80%;
+  left:15%;
+  height:45%;
+  animation: graph_enlarge1 4s forwards;
+  color: #1C252E;
+}
+
+@keyframes graph_enlarge1 {
+  /*from {height: 0%;}
+  to {height: var(--height);}*/
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.SecondSegment_Title_1{
+  position: absolute;
+  width:30%;
+  height:75%;
+  bottom: 0%;
+}
+
+.SecondSegment_Pic_sub1{
+  background: url("Wastage.JPG");
+  background-size: 100% 100%;
+  width: 20%;
+  height: 20%;  /*Dont care value as will be further changed in JS*/
+}
+
+.SecondSegment_Title_sub1{
+  font-size: var(--font_size_for_smallText1);      /*To scale in js to make it respond to resize*/
+  font-weight: bold;
+}
+
+.SecondSegment_Desc_sub1{
+  font-size: var(--font_size_for_smallText);      /*To scale in js to make it respond to resize*/
+}
+
+.SecondSegment_Title_2{
+  position: absolute;
+  left:33.33%;
+  width:30%;
+  height:75%;
+  bottom: 0%;
+}
+
+.SecondSegment_Pic_sub2{
+  background: url("assumptions.JPG");
+  background-size: 100% 100%;
+  width: 20%;
+  height: 20%;  /*Dont care value as will be further changed in JS*/
+}
+
+.SecondSegment_Title_sub2{
+  font-size: var(--font_size_for_smallText1);      /*To scale in js to make it respond to resize*/
+  font-weight: bold;
+}
+
+.SecondSegment_Desc_sub2{
+  font-size: var(--font_size_for_smallText);      /*To scale in js to make it respond to resize*/
+}
+
+.SecondSegment_Title_3{
+  position: absolute;
+  left:66.66%;
+  width:30%;
+  height:75%;
+  bottom: 0%;
+}
+
+.SecondSegment_Pic_sub3{
+  background: url("time.JPG");
+  background-size: 100% 100%;
+  width: 20%;
+  height: 20%;  /*Dont care value as will be further changed in JS*/
+}
+
+.SecondSegment_Title_sub3{
+  font-size: var(--font_size_for_smallText1);      /*To scale in js to make it respond to resize*/
+  font-weight: bold;
+}
+
+.SecondSegment_Desc_sub3{
+  font-size: var(--font_size_for_smallText);      /*To scale in js to make it respond to resize*/
+}
+
+/*3D*/
+.threeD{
+  position: relative;
+  width:100%;
+  height: 50vh; /*To scale in js to make it respond to resize*/
+  opacity: 1;
+}
+
+.coinImg1{
+  position: absolute;
+  width:  15%;
+  height:   15%;
+  left: 60%;
+  animation: coin_anim 3s forwards;
+}
+
+.coinImg2{
+  position: absolute;
+  width:  15%;
+  height:   15%;
+  left: 10%;
+  top: 40%;
+  animation: coin_anim 3s forwards;
+}
+
+.coinImg3{
+  position: absolute;
+  width:  15%;
+  height:   15%;
+  left: 75%;
+  top: 45%;
+  animation: coin_anim 3s forwards;
+}
+
+@keyframes coin_anim {
+  /*from {height: 0%;}
+  to {height: var(--height);}*/
+  0% {
+    transform: scale(0,0);
+  }
+  25% {
+    transform: scale(1.2,1.2);
+  }
+  50% {
+    transform: scale(0.85,0.85);
+  }
+  75% {
+    transform: scale(1.1,1.1);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+.fourthSegment{
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  --fourthSegmentFontSizeBig: 70px;
+  --fourthSegmentFontSizeSmall: 15px;
+}
+
+.FourthSegment_Title_0{
+  position: absolute;
+  left:50%;
+  transform: translate(-50%);  /* added this line and the above line to center */
+  z-index: 1;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 5%; 
+  height: 50%;
+}
+
+.FourthSegment_Title{
+  position: relative;
+  font-weight: bold;
+  white-space: nowrap; /* ensure the text in one line*/
+  font-size: var(--fourthSegmentFontSizeBig);
+}
+
+.FourthSegment_Sub_Title{
+  position: relative;
+  font-weight: bold;
+  color: #ffbf00;
+  font-size: var(--fourthSegmentFontSizeBig);
+  overflow: hidden; /* to make the word to be hidden before the typing effect*/
+  left:50%;
+  transform: translate(-50%);  /* added this line and the above line to center */
+  text-align: center;
+  border-right: .15em solid orange;
+  width: 55%;
+  animation:
+    typing 4s steps(20, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent}
+  50% { border-color: orange; }
+}
+
+.FourthSegment_Desc{
+  position: relative;
+  text-align: center;
+  /*font-size: var(--font_size_for_text1);      /*To scale in js to make it respond to resize*/
+  font-size: var(--fourthSegmentFontSizeSmall);
+}
+
+.button{
+  position: absolute;
+  font-size: var(--fourthSegmentFontSizeSmall);
+  left: 47%;
+  /*transform: translate(-50%);   added this line and the above line to center */
+  top: 38%;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px #999;
+  z-index: 2;
+  
+}
+
+.button:hover {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: scale(1.5);
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 4px #666;
+  transform: scale(1.5) translate(0, 15%);
+}
+
+.order{
+  position: relative;
+  width: 100%;
+  bottom: 0%;
+}
+
+.SecondSegment_Title_123{
+  position: relative;
+  text-align:left;
+  width: 80%;
+  left:15%;
+  height:45%;
+  animation: graph_enlarge1 4s forwards;
+  color: #1C252E;
+}
+
+@keyframes graph_enlarge1 {
+  /*from {height: 0%;}
+  to {height: var(--height);}*/
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.FifthSegment{
+  width:100%;
+  opacity: 70%;
+  background-image: url("imageedit_3_8768023765.jpg");
+  /*background-color: #04AA6D;*/
+  background-size: cover;
+  background-attachment: fixed;
+  --fsHeight: 0px;
+  min-height:var(--fsHeight);
+  position: static;
+
+}
+
+.FifthSegmentGroup{
+  width: 100%;
+  height:50vh;
+}
+
+.FifthSegmentDesc{
+  position: relative;
+  font-size: 250%;
+  color: white;
+  font-weight: bold;
+  left: 10%;
+  top: 30%;
+}
+
+.FifthSegmentButton{
+  position: relative;
+  width: 11%;
+  height: 11%;
+  font-size: 150%;
+  font-weight: bold;
+  left: 10%;
+  top: 35%;
+  cursor: pointer;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 2px;
+}
+
+.FifthSegmentButton:hover{
+  color: #04AA6D;
+  background-color: #1C252E;
+}
+/*
+.fifthSegment{
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  opacity: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  --borderWidth:50%;
+  --borderColor:red;
+  --fontsizefornumber: 100%;
+  --fontsizeforfifthsegmenttitle:300%;
+  --fontsizeforfifthsegmentdesc:100%;
+}
+
+.FifthSegment_Title_0{
+  position: relative;
+  color: #1C252E;
+  text-align: center;
+  top: 10%;
+  height: 15%;
+  font-size: var(--fontsizeforfifthsegmenttitle);
+  font-weight: bold;
+}
+
+.Steps{
+  position: relative;
+  text-align:left;
+  width: 80%;
+  left:15%;
+  height:70%;
+  color: #1C252E;
+}
+
+.fifthSegment0{
+  position: absolute;
+  width:30%;
+  height:70%;
+  bottom: 0%;
+  font-size: var(--fontsizeforfifthsegmentdesc);
+}
+
+.number1Border{
+  position: relative;
+  background-color: var(--borderColor);
+  width: var(--borderWidth);
+  height: var(--borderWidth); 
+  text-align: center;
+  border-radius: 10px;
+}
+
+.number1{
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+  font-size: var(--fontsizefornumber);
+  font-weight: bold;
+}
+
+.fifthSegment0SubTitle{
+  font-weight: bolder;
+}
+
+.fifthSegment1{
+  position: absolute;
+  left:33.33%;
+  width:30%;
+  height:70%;
+  bottom: 0%;
+  font-size: var(--fontsizeforfifthsegmentdesc);
+}
+
+.number2Border{
+  position: relative;
+  background-color: var(--borderColor);
+  width: var(--borderWidth);
+  height: var(--borderWidth);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.number2{
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+  font-size: var(--fontsizefornumber);
+  font-weight: bold;
+}
+
+.fifthSegment1SubTitle{
+  font-weight: bold;
+}
+
+.fifthSegment2{
+  position: absolute;
+  left:66.66%;
+  width:30%;
+  height:70%;
+  bottom: 0%;
+  font-size: var(--fontsizeforfifthsegmentdesc);
+}
+
+.number3Border{
+  position: relative;
+  background-color: var(--borderColor);
+  width: var(--borderWidth);
+  height: var(--borderWidth);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.number3{
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+  font-size: var(--fontsizefornumber);
+  font-weight: bold;
+}
+
+.fifthSegment2SubTitle{
+  font-weight: bold;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*slider*/
+/*.slider_images{
+  position: relative;
+  --height: 100vh;
+  height: var(--height);
+}
+
+.background {
+  background: url(https://picsum.photos/id/1016/1024/768);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+}
+
+.foreground {
+  background: url(https://picsum.photos/id/1016/1024/768?grayscale);
+  background-size: 200% 100%; 
+  width: 50%;     
+  height: 100%;  
+  position: absolute;
+}
+
+.slider {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    margin: 0;
+    transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: var(--height);
+  background: white;
+  cursor: pointer;
+}
+
+.text{
+  position: relative;
+}*/
